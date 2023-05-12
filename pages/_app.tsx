@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import { SideNav, TableOfContents, TopNav } from '../components';
 
 import 'prismjs';
 // Import other Prism themes here
@@ -13,11 +12,14 @@ import '../public/globals.css'
 
 import type { AppProps } from 'next/app'
 import type { MarkdocNextJsPageProps } from '@markdoc/next.js'
+import { SideNav } from '../components/SideNav';
+import { TableOfContents } from '../components/TableOfContents';
+import { TopNav } from '../components/TopNav';
 
 const TITLE = 'Markdoc';
 const DESCRIPTION = 'A powerful, flexible, Markdown-based authoring framework';
 
-function collectHeadings(node, sections = []) {
+function collectHeadings(node, sections: any[] = []) {
   if (node) {
     if (node.name === 'Heading') {
       const title = node.children[0];

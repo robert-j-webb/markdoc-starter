@@ -1,3 +1,5 @@
+'use client';
+
 import Prism from 'prismjs';
 
 import * as React from 'react';
